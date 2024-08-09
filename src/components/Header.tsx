@@ -1,4 +1,4 @@
-import logo from '../../public/images/logo-listo.png';
+import logo from '/images/logo-listo.png';
 import iconMenu from '../assets/icons/menu-hamburger.svg';
 import iconCart from '../assets/icons/cart.svg';
 import search from '../assets/icons/search.svg'

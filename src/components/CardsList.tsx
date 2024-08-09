@@ -1,29 +1,19 @@
 import {useState} from 'react';
 import Card from './Card'
-import { db } from '../db/db';
+import { CardList } from '../interfaces/CardList';
 
-import iconSale from '../assets/icons/sale.svg'
-//import imgCard from '../assets/images/bebe.png';
+const CardsList = ({ db, title, iconLeft, iconRight }: CardList) => {
 
-
-// const db = require('../data/data');
-
-
-const CardsList : React.FC = () => {
-
-  const [data, setData] = useState(db);
-  console.log(setData);
-  // useEffect ( () => {
-  //    setData(db)
-  // }, [data]);
+  const [data] = useState(db);
 
   return (
     <>
       <article className='container-cards-title df'>
           <div className="title-section-cards df">
-              <img src={iconSale} alt="sale" />
-              <h3 className='title'>OFERTAS DEL DÍA</h3>
-              <img src={iconSale} alt="sale" />
+              <img src={iconLeft} alt="sale" />
+              <h3 className='title'>{title}</h3>
+              <img src={iconRight} alt="sale" />
+              <p>Ver más</p>
           </div>
           <section className='container-cards df'>   
             {data.map((item)=>(
@@ -38,65 +28,6 @@ const CardsList : React.FC = () => {
                 isOff={item.isOff}
               />
             ))}
-            {/* <Card
-              image={imgCard}
-              description='Muñeca Cry Babies Dressy Bebe Lloron Con Pelo Real...'
-              price= {31999.50}
-              //priceOff={0}
-              tagText= 'NUEVO'
-              freeShipping = {true}
-              isOff={false}
-            />
-             <Card
-              image={imgCard}
-              description='Muñeca Cry Babies Dressy Bebe Lloron Con Pelo Real...'
-              price= {17500.50}
-              percentageOff={30}
-              //priceOff={35000}
-              tagText= '% OFF'
-              freeShipping = {true}
-              isOff={true}
-            />
-            <Card
-              image={imgCard}
-              description='Muñeca Cry Babies Dressy Bebe Lloron Con Pelo Real...'
-              price= {17500.00}
-              percentageOff={30}
-              //priceOff={35000}
-              tagText= '% OFF'
-              freeShipping = {false}
-              isOff={true}
-            />
-              <Card
-              image={imgCard}
-              description='Muñeca Cry Babies Dressy Bebe Lloron Con Pelo Real...'
-              price= {31999.50}
-              //priceOff={0}
-              tagText= 'NUEVO'
-              freeShipping = {true}
-              isOff={false}
-            />
-             <Card
-              image={imgCard}
-              description='Muñeca Cry Babies Dressy Bebe Lloron Con Pelo Real...'
-              price= {17500.00}
-              //priceOff={35000}
-              percentageOff={30}
-              tagText= '% OFF'
-              freeShipping = {true}
-              isOff={true}
-            />
-            <Card
-              image={imgCard}
-              description='Muñeca Cry Babies Dressy Bebe Lloron Con Pelo Real...'
-              price= {17500.00}
-              //priceOff={35000}
-              percentageOff={30}
-              tagText= '% OFF'
-              freeShipping = {false}
-              isOff={true}
-            /> */}
-          
           </section>
         </article>
     </>
@@ -105,21 +36,4 @@ const CardsList : React.FC = () => {
 
 export default CardsList
 
-  // useEffect ( () => {
-  //   setData(db)
-  // }, []);
-
-//     const next = document.querySelectorAll('img.next');
-//   const scroll = () =>{
-//     next.forEach(e => {
-//       e.addEventListener('click', function() {
-//           e.previousElementSibling!.scrollLeft += 350
-//           // e.previousElementSibling?.classList.add('efect-scroll');
-//           // console.log(e.previousElementSibling);
-//           // setTimeout(function (){   
-//           //     e.previousElementSibling?.classList.remove('efect-scroll');
-//           // }, 1500);
-//       });
-//   });
-//   }
-//   console.log(scroll())
+  

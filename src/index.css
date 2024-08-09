@@ -128,13 +128,13 @@ h5{
 
 .container-btn{
   width: max-content;
-  margin: 5px auto;
+  margin: 10px auto;
   justify-content: center;
   gap: 30px;
 }
 .container-btn .btn-slider{
-  height: 15px;
-  width: 15px;  
+  height: 10px;
+  width: 10px;  
   margin: auto;
   border-radius: 50px;
   background-color: var(--grey-1);
@@ -146,6 +146,7 @@ button.btn-slider.selected{
 }
 /*===========================*/
 .container-category-ages{
+  margin-top: 30px;
   justify-content: space-between;
   gap: 10px;
   padding: 0 30px;
@@ -191,6 +192,20 @@ button.btn-slider.selected{
 .title-section-cards{
   padding-left: 10px;
   gap: 20px;
+  align-items: center;
+}
+.title-section-cards p{
+  font-size: 10px;
+  padding-left: 5px;
+  font-weight:500;  
+  text-decoration: underline;
+  color: var(--acento);
+}
+.title-section-cards p:hover{
+  font-weight: bold;
+  color: var(--primary-s1);
+
+  cursor: pointer;
 }
 .title-section-cards h3{
   color: var(--grey-1); 
@@ -347,6 +362,28 @@ span.price-off-text {
 .tag.red span{
   background-color: var(--red);
 }
+.publicity{
+  position: relative;
+  padding: 0px 30px;
+}
+.publicity img{
+  width: 100%;
+  height: auto;
+}
+.publicity button{
+  width: 80px;
+  height: 20px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #FFBD00 0%, #FF5400 100%);
+  color: var(--white);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 10px;
+  font-weight: 600;
+  position: absolute;
+  bottom: 7%;
+  left: 10%;
+}
+
 /* .tag.red svg path{
   fill: var(--red);
 } */
@@ -366,9 +403,12 @@ span.price-off-text {
     height: 30px;
     font-size: 13px;
   }
-  .container-btn{
-    margin: 10px auto; 
-   }
+  .publicity button{
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+ 
 }
 /*============================================================*/
 @media (min-width: 768px) {
@@ -398,12 +438,14 @@ span.price-off-text {
     padding: 30px 50px 0 50px;
   }
   
-  .btn-slider{
-    height: 20px;
-    width: 20px;
+  .container-btn .btn-slider{
+    height: 15px;
+    width: 15px;
     
   }
+   
   .container-category-ages{
+     margin-top: 50px;
     padding: 0 50px;
     gap: 15px;
   }
@@ -415,6 +457,14 @@ span.price-off-text {
   .container-category-ages button:hover{
     font-size: 17px;
     
+  }
+  .publicity{
+    padding: 0px 50px;
+  }
+  .publicity button{
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
   }
   .container-cards{
     padding: 0 50px 25px 10px;
@@ -429,6 +479,11 @@ span.price-off-text {
   }
   .title-section-cards{
     padding-left: 10px;
+  }
+  .title-section-cards p{
+    font-size: 14px;
+    padding-left: 10px;
+    font-weight: 600;
   }
   .container-card{
     width: 250px;
@@ -525,9 +580,9 @@ span.price-off-text {
   .container-btn{
     margin: 15px auto; 
    }
-   .btn-slider{
-     height: 25px;
-     width: 25px;
+  .container-btn .btn-slider{
+     height: 20px;
+     width: 20px;
      
    }
   .container-category-ages button{
@@ -537,7 +592,14 @@ span.price-off-text {
   }
   .container-category-ages button:hover{
     font-size: 19px;
-    
+  }
+  .publicity{
+    padding: 0px 60px;
+  }
+  .publicity button{
+    width: 180px;
+    height: 50px;
+    font-size: 16px;
   }
   .container-cards{
     padding: 0 60px 25px 10px;
@@ -550,7 +612,9 @@ span.price-off-text {
    
     font-size: 20px;
   }
-  
+  .title-section-cards p{
+    font-size: 16px;
+  }
 
 }
 /* ================================================= */
@@ -569,9 +633,9 @@ span.price-off-text {
   .container-btn{
     margin: 25px auto; 
   }
-   .btn-slider{
-     height: 30px;
-     width: 30px;
+  .container-btn .btn-slider{
+     height: 25px;
+     width: 25px;
      
    }
   
@@ -602,6 +666,14 @@ span.price-off-text {
   }
   .container-category-ages button:hover{
     font-size: 22px;
-    
+  }
+  .publicity button{
+    width: 220px;
+    height: 60px;
+    font-size: 18px;
+  }
+  .title-section-cards p{
+    font-size: 18px;
+    padding-left: 20px;
   }
 }
