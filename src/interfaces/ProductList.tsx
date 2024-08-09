@@ -1,6 +1,6 @@
-import Card from "./Card";
+import Card from "./ProductItem";
 
-export interface CardList {
+export interface ProductList {
     db: Card[];
     title: string;
     iconLeft: string;

@@ -1,8 +1,8 @@
 
 import cart from '../assets/icons/cart.svg'
-import CardProps from '../interfaces/Card'
+import ProductItem from '../interfaces/ProductItem'
 
-const Card = ({image, description, price, percentageOff = 0, tagText, freeShipping, isOff}: CardProps) => {
+const Product = ({image, description, price, percentageOff = 0, tagText, freeShipping, isOff}: ProductItem) => {
    // const {isOff, tagTextOff} = off
     const priceNormal = Math.trunc(price);
     const decimalPrice =  (price - Math.trunc(price)).toFixed(2).split('.')[1];
@@ -48,4 +48,4 @@ const Card = ({image, description, price, percentageOff = 0, tagText, freeShippi
   )
 }
 
-export default Card
+export default Product

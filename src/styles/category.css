@@ -83,6 +83,9 @@ h3{
         margin: 0px 40px;
         gap: 20px;
     }
+    .container-category{
+        margin-top: 15px;
+    }
     
 }
 
@@ -106,6 +109,9 @@ h3{
     .blob-photo{
         width: 100px;
         height: 100px;
+    }
+    .container-category{
+        margin-top: 30px;
     }
 }
 

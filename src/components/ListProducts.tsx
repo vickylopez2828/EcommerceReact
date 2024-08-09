@@ -1,8 +1,8 @@
 import {useState} from 'react';
-import Card from './Card'
-import { CardList } from '../interfaces/CardList';
+import Product from './Product'
+import { ProductList } from '../interfaces/ProductList';
 
-const CardsList = ({ db, title, iconLeft, iconRight }: CardList) => {
+const ListProducts = ({ db, title, iconLeft, iconRight }: ProductList) => {
 
   const [data] = useState(db);
 
@@ -17,7 +17,7 @@ const CardsList = ({ db, title, iconLeft, iconRight }: CardList) => {
           </div>
           <section className='container-cards df'>   
             {data.map((item)=>(
-              <Card
+              <Product
                 key={item.id}
                 image={item.image}
                 description={item.description}
@@ -34,6 +34,6 @@ const CardsList = ({ db, title, iconLeft, iconRight }: CardList) => {
   )
 }
 
-export default CardsList
+export default ListProducts
 
   

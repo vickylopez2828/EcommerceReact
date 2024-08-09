@@ -1,7 +1,7 @@
-import Card from '../interfaces/Card'
+import Card from '../interfaces/ProductItem'
 
 
-export const cardData : Card[] = [
+export const productData : Card[] = [
     {
         id: 1,
         image: '/images/bebe.png',

@@ -1,7 +1,7 @@
-import CardsList from './CardsList'
+import ListProducts from './ListProducts'
 import Carrousel from './Carrousel'
 import Category from './Category';
-import { cardData } from '../db/cardData';
+import { productData } from '../db/productData';
 
 import iconSale from '../assets/icons/sale.svg'
 import iconNewLeft from '../assets/icons/novedad-left.svg'
@@ -26,27 +26,27 @@ const Home = () => {
           <button>10 A 12 AÑOS</button>
           <button>ADOLESCENTES</button>
         </div>
-          <CardsList
-            db={cardData}
+          <ListProducts
+            db={productData}
             title='OFERTAS DEL DÍA'
             iconLeft={iconSale}
             iconRight= {iconSale}
           />
-          <CardsList
-            db={cardData}
+          <ListProducts
+            db={productData}
             title='NOVEDADES'
             iconLeft={iconNewLeft}
             iconRight= {iconNewRight}
           />
           <Category/>
-          <CardsList
-            db={cardData}
+          <ListProducts
+            db={productData}
             title='ARTE'
             iconLeft={iconArt}
             iconRight= {iconArt}
           />
-          <CardsList
-            db={cardData}
+          <ListProducts
+            db={productData}
             title='PARA LOS MÁS CHICOS'
             iconLeft={iconTeddy}
             iconRight= {iconTeddy}
@@ -55,8 +55,8 @@ const Home = () => {
             <img src={publicity} alt="" />
             <button>VER ARTÍCULOS</button>
           </div>
-           <CardsList
-            db={cardData}
+           <ListProducts
+            db={productData}
             title='PARA LOS MÁS GRANDES'
             iconLeft={iconGame}
             iconRight= {iconGame}

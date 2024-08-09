@@ -1,5 +1,5 @@
 
-export default interface Card {
+export default interface ProductItem {
     id?: number;
     image: string;
     description: string;
