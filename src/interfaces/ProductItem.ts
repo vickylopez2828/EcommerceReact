@@ -1,6 +1,6 @@
 
-export default interface ProductItem {
-    id?: number;
+export interface ProductItem {
+    id: number;
     image: string;
     description: string;
     price: number;
@@ -9,4 +9,6 @@ export default interface ProductItem {
     tagText: string;
     freeShipping: boolean;
     isOff?: boolean;
+    quantity?:number;
+    stock?:number
 }

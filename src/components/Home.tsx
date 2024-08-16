@@ -10,10 +10,16 @@ import iconArt from '../assets/icons/arte.svg'
 import iconTeddy from '../assets/icons/teddy.svg'
 import iconGame from '../assets/icons/games.svg'
 import publicity from '/images/publiOk.png'
+import { ProductItem } from '../interfaces/ProductItem';
+//import { ProductItem } from '../interfaces/ProductItem';
+interface HomeProps {
+  setCart: React.Dispatch<React.SetStateAction<ProductItem[]>>
+  cart:ProductItem[];
+}
 
+const Home: React.FC<HomeProps> = ({setCart, cart}) => {
 
-const Home = () => {
-
+  console.log(setCart)
   return (
     <>
       <div className='home-body'>
@@ -31,12 +37,16 @@ const Home = () => {
             title='OFERTAS DEL DÍA'
             iconLeft={iconSale}
             iconRight= {iconSale}
+            setCart={setCart}
+            cart={cart}
           />
           <ListProducts
             db={productData}
             title='NOVEDADES'
             iconLeft={iconNewLeft}
             iconRight= {iconNewRight}
+            setCart={setCart}
+            cart={cart}
           />
           <Category/>
           <ListProducts
@@ -44,12 +54,16 @@ const Home = () => {
             title='ARTE'
             iconLeft={iconArt}
             iconRight= {iconArt}
+            setCart={setCart}
+            cart={cart}
           />
           <ListProducts
             db={productData}
             title='PARA LOS MÁS CHICOS'
             iconLeft={iconTeddy}
             iconRight= {iconTeddy}
+            setCart={setCart}
+            cart={cart}
           />
           <div className='publicity'>
             <img src={publicity} alt="" />
@@ -60,6 +74,8 @@ const Home = () => {
             title='PARA LOS MÁS GRANDES'
             iconLeft={iconGame}
             iconRight= {iconGame}
+            setCart={setCart}
+            cart={cart}
           />
       </div>
       

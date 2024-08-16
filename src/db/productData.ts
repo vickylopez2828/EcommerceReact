@@ -1,16 +1,17 @@
-import Card from '../interfaces/ProductItem'
+import {ProductItem} from '../interfaces/ProductItem'
 
 
-export const productData : Card[] = [
+export const productData : ProductItem[] = [
     {
         id: 1,
         image: '/images/bebe.png',
         description:'Muñeca Cry Babies Dressy Bebe Lloron Con Pelo Real...',
-        price: 17500.50,
+        price: 17500.40,
         percentageOff: 30,
         tagText: '% OFF',
         freeShipping: true,
-        isOff:true
+        isOff:true,
+        stock:5
     },
     {
         id: 2,
@@ -20,7 +21,8 @@ export const productData : Card[] = [
         percentageOff: 10,
         tagText: '% OFF',
         freeShipping: false,
-        isOff:true
+        isOff:true,
+        stock:5
     },
     {
         id: 3,
@@ -30,17 +32,20 @@ export const productData : Card[] = [
         percentageOff: 0,
         tagText: 'NUEVO',
         freeShipping: false,
-        isOff:false
+        isOff:false,
+        stock:3
     },
     {
         id: 4,
         image: '/images/block.png',
         description:'Bloques Para Armar Didácticos Encastrables Set X 70',
         price: 38500.00,
-        percentageOff: 25,
-        tagText: '% OFF',
+        percentageOff: 0,
+        tagText: '',
         freeShipping: true,
-        isOff:true
+        isOff:false,
+
+        stock:5
     },{
         id: 5,
         image: '/images/tricycle.webp',
@@ -49,7 +54,8 @@ export const productData : Card[] = [
         percentageOff: 0,
         tagText: 'NUEVO',
         freeShipping: true,
-        isOff:false
+        isOff:false,
+        stock:5
     },
     {
         id: 6,
@@ -59,7 +65,8 @@ export const productData : Card[] = [
         percentageOff: 30,
         tagText: '% OFF',
         freeShipping: false,
-        isOff:true
+        isOff:true,
+        stock:5
     },
     {
         id: 7,
@@ -69,7 +76,8 @@ export const productData : Card[] = [
         percentageOff: 30,
         tagText: '% OFF',
         freeShipping: false,
-        isOff:true
+        isOff:true,
+        stock:5
     },
     {
         id: 8,
@@ -79,6 +87,7 @@ export const productData : Card[] = [
         percentageOff: 30,
         tagText: '% OFF',
         freeShipping: false,
-        isOff:true
+        isOff:true,
+        stock:5
     }
 ]

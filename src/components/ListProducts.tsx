@@ -1,8 +1,13 @@
 import {useState} from 'react';
 import Product from './Product'
 import { ProductList } from '../interfaces/ProductList';
+import { ProductItem } from '../interfaces/ProductItem';
 
-const ListProducts = ({ db, title, iconLeft, iconRight }: ProductList) => {
+type ListProps = ProductList & {
+  setCart: React.Dispatch<React.SetStateAction<ProductItem[]>>
+  cart: ProductItem[]
+}
+const ListProducts = ({ db, title, iconLeft, iconRight, setCart, cart }: ListProps) => {
 
   const [data] = useState(db);
 
@@ -16,16 +21,12 @@ const ListProducts = ({ db, title, iconLeft, iconRight }: ProductList) => {
               <p>Ver más</p>
           </div>
           <section className='container-cards df'>   
-            {data.map((item)=>(
+            {data.map((product)=>(
               <Product
-                key={item.id}
-                image={item.image}
-                description={item.description}
-                price= {item.price}
-                percentageOff = {item.percentageOff}
-                tagText= {item.tagText}
-                freeShipping = {item.freeShipping}
-                isOff={item.isOff}
+                key={product.id}
+                product={product}
+                setCart = {setCart}
+                cart={cart}
               />
             ))}
           </section>

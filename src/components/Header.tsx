@@ -2,7 +2,19 @@ import logo from '/images/logo-listo.png';
 import iconMenu from '../assets/icons/menu-hamburger.svg';
 import iconCart from '../assets/icons/cart.svg';
 import search from '../assets/icons/search.svg'
-const Header = () => {
+import Cart from './Cart';
+import { useState } from 'react';
+import { ProductItem } from '../interfaces/ProductItem';
+interface HeaderProps {
+    setCart: React.Dispatch<React.SetStateAction<ProductItem[]>>
+    cart: ProductItem[]
+  }
+
+const Header: React.FC<HeaderProps> = ({cart, setCart}) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const openCloseCart = () =>{
+        setIsOpen(true)
+    }
   return (
     <>
         <section className='header'>
@@ -21,11 +33,17 @@ const Header = () => {
                 <h5 className='h5'>INGRESÁ</h5>
             </div>
             <div className='icon-cart df jc-c'>
-                <img src={iconCart} alt="icon-cart" />
+                <button onClick={openCloseCart}><img src={iconCart} alt="icon-cart" /></button>
+                
             </div>
             
         </section>
-        
+        <Cart
+            isOpen = {isOpen}
+            setIsOpen = {setIsOpen}
+            cart={cart}
+            setCart={setCart}
+        />
         
     </>
   )

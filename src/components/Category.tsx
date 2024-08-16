@@ -18,7 +18,6 @@ const Category = () => {
             <div className='container-category-blob'>
                 {
                     category.map((item) =>(
-                          <>
                             <div key={item.id} className='container-blob'>
                                 <div className='blob'>
                                     <img className='blob-img' src={blob} alt="blob" />
@@ -28,7 +27,6 @@ const Category = () => {
                                     <p>{item.name}</p>
                                 </div>
                             </div>
-                        </>
                     ))
                 }
             </div>
